@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 
 function LineChart2(props) {
-	console.log(props.data);
 	const data = {
 		labels: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"],
 		datasets: [
