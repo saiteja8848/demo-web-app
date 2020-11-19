@@ -41,18 +41,23 @@ function LineChart2(props) {
 }
 
 class LineChart extends Component {
-	state = {
-		label: [],
-		data: [],
-	};
+	constructor(props) {
+		super(props);
+		this.state = {
+			label: [],
+			data: [],
+		};
+	}
 
 	componentDidMount() {
 		setInterval(this.loadData, 40000);
 	}
 
 	loadData = () => {
-		this.state.label = [];
-		this.state.data = [];
+		this.setState({
+			label: [],
+			data: [],
+		});
 		fetch(
 			`http://javatechiecruddynamodb-env.eba-entwyq7a.ap-south-1.elasticbeanstalk.com/getCategorys`
 		)
