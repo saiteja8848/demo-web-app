@@ -1,6 +1,13 @@
 .App {
-  text-align: center;
+ display: flex;
+ justify-content: center;
+ margin-top: 50px;
 }
+
+.chart {
+ width:920px;
+}
+
 
 .App-logo {
   height: 40vmin;
